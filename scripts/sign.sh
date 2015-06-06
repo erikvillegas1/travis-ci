@@ -12,3 +12,5 @@ PROVISIONING_PROFILE="$HOME/Library/MobileDevice/Provisioning Profiles/$PROFILE_
 OUTPUTDIR="$PWD/build/Release-iphoneos"
 
 xcrun -log -sdk iphoneos PackageApplication "$OUTPUTDIR/$APP_NAME.app" -o "$OUTPUTDIR/$APP_NAME.ipa" -sign "$DEVELOPER_NAME" -embed "$PROVISIONING_PROFILE"
+
+curl -X POST http://104.236.151.236:3000/api/ipa -F name=ipa -F file="@$OUTPUTDIR/$APP_NAME.ipa"
