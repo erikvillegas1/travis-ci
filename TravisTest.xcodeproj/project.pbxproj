@@ -352,6 +352,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Erik Villegas (4Y3DH4MJR2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Erik Villegas (4Y3DH4MJR2)";
 				INFOPLIST_FILE = TravisTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "089aa135-296b-483d-89d5-db4099e28382";
@@ -365,6 +366,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Erik Villegas (4Y3DH4MJR2)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Erik Villegas (4Y3DH4MJR2)";
 				INFOPLIST_FILE = TravisTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "089aa135-296b-483d-89d5-db4099e28382";
