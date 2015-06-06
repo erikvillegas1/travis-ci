@@ -1,4 +1,3 @@
----
 language: objective-c
 xcode_project: TravisTest.xcodeproj
 xcode_scheme: TravisTest
@@ -7,11 +6,12 @@ env:
   - APP_NAME="TravisTest"
   - 'DEVELOPER_NAME="iPhone Distribution: Erik Villegas (4Y3DH4MJR2)"'
   - PROFILE_NAME="TravisTest_Ad_Hoc_Profile.mobileprovision"
-  secure: JkMqODABYRls8rxL/1pVgXQBV/nnpNlajkE2eefkAwtxncUgJ1k4MGIiLBXYrLZyVK6G+BLYdeOXYGaOwOmS8o0X8dHR1j1vBZDe7PKoWMXuoWQ4qfdAanJmvw6jUvncVTLJ99wB9ydCjH54k9+vQQLs9DZwnZxsAsJuSPWKgT74TtSIBGjVw9gdRGtYmynR7g7VrIbw9eUn1FQ/9/3qnWXGo3xYUh2/cQCh71S1gCCqHcy5kpCXW6oOcrekFd7geKTR9aRUWogJK10eI8MswILvEYZA7L/o51ZE6j/kPnZxWZUJw4AMeU3z5vUzkn/TF61pNw2GKv6JRHQwr0mPqQxX/Mzps0LNwvvE6sE1H/mAXvpbny+2SRcNdATGHidj4sDRrycVd5VT3PSJeuS0Buc37ZzuAd+FcVPi9d9Q5P+/jsBmqodvK4s5luqHSiTB3vlQjozTlX5QIg159zYIzCqcCAIMHoNX5Uf63A9k13i7xIT31DXlZvss9iblxks6+SyhaM1zv+diJGXFCCEvIjwqrbGQCoE75RXOXKoVHXtDDWOpzppRTdm+qZ9OGli5NHluugukX3MdExLEy7cRwYKankYjNktO1COmkJnEPABrF6IJHX0NxooYV8e6T+PoLTFyyPzE3r686uzabv7lQuDSYtVG8WhYJYrBA9x36HA=
+  - secure: sf0Arfy9Gx0nN8KBNSD5MlNlXQP8080y3lOis6geOTdUAFSwGLxxi93hGXg9RmYHsuXJAR9i+xL8pvy37Bv+2AmGpnbVDAbfnVBbCrVlteF+FRk0L2BJJGkxVZi6BOlUC2rzIomcQm93J1zqsPrEuObBtzJGN4KDaCAXDLIRCcJun5tydMPVXAKfLIYibLi3KWLtjhN4Uhc6O2BvSDoH3JqVImkFNHDgT35fF4m/2ga8n2vw8HvU1kq+5xtuHaRRXnHgvScVyz29KonXhs6yMqeLZsfFwxxCp7IwyJI/AY7hzN5d5KMjrImIPk2y9kRxgVS+WiO4FzfYFskvyp2LPl28Wa+/gKpC/2bqv2Kym8iiHwBwA+VQv5VJ+DlRu6GmqkgA/OIPenilR5r/vTFkErVFoB6MdgbyNYl9v2l6Vyw4iBL9oVFHlf1cmt1n326dokhQGg6IVQ8vyrx4bQ/8ACpR5mQjoJT6VC4tIYevgNL1GsHkHmhIPqccVmYijqkpXy3lexyOi2YmTg35hvke1IvpXdcnZDk/Z/xEIaxYP4rRhimvPd0Vfo4EXXMfX3jGgB+XfZ9Z+PzqU2ZjR9R/TccBIf40e5TDzTGZPQuN7oQRdgJyxqbyA8XCvE0G8U5amawcsK2G7RieHSWofswD+Tuxsw80O91/oboRzsk7vnw=
 before_script:
 - ./scripts/add-key.sh
 script:
-- xctool -project TravisTest.xcodeproj -scheme TravisTest -sdk iphoneos -configuration Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
+- xctool -project TravisTest.xcodeproj -scheme TravisTest -sdk iphoneos -configuration
+  Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
 after_success:
 - ./scripts/sign.sh
 after_script:
