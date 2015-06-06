@@ -6,7 +6,7 @@ env:
   - secure: sf0Arfy9Gx0nN8KBNSD5MlNlXQP8080y3lOis6geOTdUAFSwGLxxi93hGXg9RmYHsuXJAR9i+xL8pvy37Bv+2AmGpnbVDAbfnVBbCrVlteF+FRk0L2BJJGkxVZi6BOlUC2rzIomcQm93J1zqsPrEuObBtzJGN4KDaCAXDLIRCcJun5tydMPVXAKfLIYibLi3KWLtjhN4Uhc6O2BvSDoH3JqVImkFNHDgT35fF4m/2ga8n2vw8HvU1kq+5xtuHaRRXnHgvScVyz29KonXhs6yMqeLZsfFwxxCp7IwyJI/AY7hzN5d5KMjrImIPk2y9kRxgVS+WiO4FzfYFskvyp2LPl28Wa+/gKpC/2bqv2Kym8iiHwBwA+VQv5VJ+DlRu6GmqkgA/OIPenilR5r/vTFkErVFoB6MdgbyNYl9v2l6Vyw4iBL9oVFHlf1cmt1n326dokhQGg6IVQ8vyrx4bQ/8ACpR5mQjoJT6VC4tIYevgNL1GsHkHmhIPqccVmYijqkpXy3lexyOi2YmTg35hvke1IvpXdcnZDk/Z/xEIaxYP4rRhimvPd0Vfo4EXXMfX3jGgB+XfZ9Z+PzqU2ZjR9R/TccBIf40e5TDzTGZPQuN7oQRdgJyxqbyA8XCvE0G8U5amawcsK2G7RieHSWofswD+Tuxsw80O91/oboRzsk7vnw=
   - APP_NAME="TravisTest"
   - 'DEVELOPER_NAME="iPhone Distribution: Erik Villegas (4Y3DH4MJR2)"'
-  - PROFILE_NAME="TravisTest_Ad_Hoc_Profile"
+  - PROFILE_NAME="TravisTest_Ad_Hoc_Profile.mobileprovision"
 before_script:
 - ./scripts/add-key.sh
 script:
