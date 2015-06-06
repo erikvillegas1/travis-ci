@@ -1,3 +1,17 @@
 language: objective-c
-xcode_project: TravisTest.xcodeproj # path to your xcodeproj folder
+xcode_project: TravisTest.xcodeproj
 xcode_scheme: TravisTest
+env:
+  global:
+    secure: JkMqODABYRls8rxL/1pVgXQBV/nnpNlajkE2eefkAwtxncUgJ1k4MGIiLBXYrLZyVK6G+BLYdeOXYGaOwOmS8o0X8dHR1j1vBZDe7PKoWMXuoWQ4qfdAanJmvw6jUvncVTLJ99wB9ydCjH54k9+vQQLs9DZwnZxsAsJuSPWKgT74TtSIBGjVw9gdRGtYmynR7g7VrIbw9eUn1FQ/9/3qnWXGo3xYUh2/cQCh71S1gCCqHcy5kpCXW6oOcrekFd7geKTR9aRUWogJK10eI8MswILvEYZA7L/o51ZE6j/kPnZxWZUJw4AMeU3z5vUzkn/TF61pNw2GKv6JRHQwr0mPqQxX/Mzps0LNwvvE6sE1H/mAXvpbny+2SRcNdATGHidj4sDRrycVd5VT3PSJeuS0Buc37ZzuAd+FcVPi9d9Q5P+/jsBmqodvK4s5luqHSiTB3vlQjozTlX5QIg159zYIzCqcCAIMHoNX5Uf63A9k13i7xIT31DXlZvss9iblxks6+SyhaM1zv+diJGXFCCEvIjwqrbGQCoE75RXOXKoVHXtDDWOpzppRTdm+qZ9OGli5NHluugukX3MdExLEy7cRwYKankYjNktO1COmkJnEPABrF6IJHX0NxooYV8e6T+PoLTFyyPzE3r686uzabv7lQuDSYtVG8WhYJYrBA9x36HA=
+  - APP_NAME="TravisTest"
+  - 'DEVELOPER_NAME="iPhone Distribution: Erik Villegas (4Y3DH4MJR2)"'
+  - PROFILE_NAME="TravisTest_Ad_Hoc_Profile.mobileprovision"
+before_script:
+- ./scripts/add-key.sh
+script:
+- xctool -project TravisTest.xcodeproj -scheme TravisTest -sdk iphoneos -configuration Release OBJROOT=$PWD/build SYMROOT=$PWD/build ONLY_ACTIVE_ARCH=NO
+after_success:
+- ./scripts/sign.sh
+after_script:
+- ./scripts/keychain.sh
